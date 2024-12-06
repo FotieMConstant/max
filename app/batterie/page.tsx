@@ -5,7 +5,7 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card"
-import { BatteryFull, BatteryWarning } from "lucide-react";
+import { BatteryCharging, BatteryFull, BatteryWarning } from "lucide-react";
 
 export default function Home() {
   return (
@@ -18,15 +18,23 @@ export default function Home() {
                   Batterie
                 </div>
                 <div className="flex justify-between">
-                  <div>
+                  <div className="hidden">
                     <BatteryFull size={200} className="text-green-500 mr-3" />
                     <div className="text-5xl font-bold text-center">
                       100%
                     </div>
                   </div>
+                  <div className="justify-between">
+                    <BatteryCharging size={200} className="text-green-500 mr-3" />
+                    <div className="text-5xl font-bold text-center">
+                      78%
+                    </div>
+                  </div>
                   <div className="hidden justify-between">
                     <BatteryWarning size={200} className="text-red-500 mr-3" />
-                    0%
+                    <div className="text-5xl font-bold text-center">
+                      0%
+                    </div>
                   </div>
                 </div>
               </div>
